@@ -6,14 +6,16 @@ describe "signup" do
   end
 
   it "registers successfully with a valid username and password" do
-    {"id"=>18,
-     "name"=>nil,
-     "nickname"=>nil,
-     "image"=>nil,
-     "email"=>"first_email1@gmail.com",
-     "tokens"=>"vABqBnTqpMynRzbhCQLQ",
-     "created_at"=>"2016-02-11T20:55:21.266Z",
-     "updated_at"=>"2016-02-11T20:55:21.282Z"}
+    VCR.use_cassette("valid registration", :re_record_interval => 60 * 60 * 24 * 7) do
+      response_valid = Teachable::Stats::Signup.new.register("original_email4@gmail.com", "password", "password")
+
+      expect(response_valid["id"]).to eql(22)
+      expect(response_valid["name"]).to eql(nil)
+      expect(response_valid["nickname"]).to eql(nil)
+      expect(response_valid["image"]).to eql(nil)
+      expect(response_valid["email"]).to eql("original_email4@gmail.com")
+      expect(response_valid["tokens"]).to be_truthy
+    end
   end
 
   it "registers unsuccessfully with a password that is too short" do
