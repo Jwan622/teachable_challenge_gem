@@ -1,0 +1,110 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://fast-bayou-75985.herokuapp.com/users.json
+    body:
+      encoding: US-ASCII
+      string: user[email]=first_email2%40gmail.com&user[password]=password&user[password_confirmation]=password
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      Content-Length:
+      - '97'
+      Content-Type:
+      - application/x-www-form-urlencoded
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 201
+      message: 'Created '
+    headers:
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Location:
+      - https://fast-bayou-75985.herokuapp.com/
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"65f5ed60b844a634f59c001d83a9e79a"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 23c32b16-a31d-41e9-87de-57812a8c399b
+      X-Runtime:
+      - '0.170080'
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.2.4/2015-12-16)
+      Date:
+      - Thu, 11 Feb 2016 21:17:10 GMT
+      Content-Length:
+      - '195'
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"id":19,"name":null,"nickname":null,"image":null,"email":"first_email2@gmail.com","tokens":"p2181ehsn2_1kGn85mig","created_at":"2016-02-11T21:17:10.860Z","updated_at":"2016-02-11T21:17:10.874Z"}'
+    http_version: 
+  recorded_at: Thu, 11 Feb 2016 21:17:11 GMT
+- request:
+    method: post
+    uri: https://fast-bayou-75985.herokuapp.com/users.json
+    body:
+      encoding: US-ASCII
+      string: user[email]=first_email2%40gmail.com&user[password]=password&user[password_confirmation]=non%20matching%20password
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      Content-Length:
+      - '114'
+      Content-Type:
+      - application/x-www-form-urlencoded
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 422
+      message: 'Unprocessable Entity '
+    headers:
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-cache
+      X-Request-Id:
+      - 6971ff61-720e-4a13-a87c-b5d04dc97fac
+      X-Runtime:
+      - '0.814664'
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.2.4/2015-12-16)
+      Date:
+      - Thu, 11 Feb 2016 21:17:17 GMT
+      Content-Length:
+      - '98'
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"errors":{"email":["has already been taken"],"password_confirmation":["doesn''t
+        match Password"]}}'
+    http_version: 
+  recorded_at: Thu, 11 Feb 2016 21:17:17 GMT
+recorded_with: VCR 3.0.1
