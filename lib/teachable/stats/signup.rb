@@ -4,15 +4,18 @@ require 'rest-client'
 module Teachable
   module Stats
     class Signup
-      def register
+      def register(email, password, password_confirm)
         begin
           base_url = "https://fast-bayou-75985.herokuapp.com/users.json"
-          header = { content_type: :json, accept: :json }
-          response = RestClient.post base_url, { "user" => { "email": "dev-25@example.com", "password": "password", "password_confirmation": "password" }}, header
-          puts response
-          puts JSON.parse(response.body)
+          header = { accept: :json }
+          response = RestClient.post base_url, { "user" => { "email": email, "password": password, "password_confirmation": password_confirm }}, header
+          JSON.parse(response.body)
         rescue => e
-          e.response
+          errors = JSON.parse(e.response)
+          errors_formatted = errors["errors"].map do |error|
+            error[0] + " " + error[1][0]
+          end.join(", ")
+          "Something went wrong when trying to register. These are your errors: #{errors_formatted}"
         end
       end
     end
