@@ -4,7 +4,7 @@ require 'rest-client'
 module Teachable
   module Stats
     class Signup
-      def register(email, password, password_confirm)
+      def self.register(email, password, password_confirm)
         begin
           base_url = "https://fast-bayou-75985.herokuapp.com/users.json"
           header = { accept: :json }
