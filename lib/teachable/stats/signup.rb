@@ -8,7 +8,13 @@ module Teachable
         begin
           base_url = "https://fast-bayou-75985.herokuapp.com/users.json"
           header = { accept: :json }
-          response = RestClient.post base_url, { "user" => { "email": email, "password": password, "password_confirmation": password_confirmation }}, header
+          response = RestClient.post base_url,
+                                    { "user" => { "email": email,
+                                                  "password": password,
+                                                  "password_confirmation": password_confirmation 
+                                                }
+                                    },
+                                    header
           JSON.parse(response.body)
         rescue => e
           errors = JSON.parse(e.response)
