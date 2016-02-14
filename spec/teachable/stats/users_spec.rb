@@ -3,7 +3,7 @@ require 'spec_helper'
 describe "get user endpoint" do
   describe "#user_info" do
     it "has a user class" do
-      expect(Teachable::Stats::User).to be_truthy
+      expect(Teachable::Stats).to be_truthy
     end
 
     it "cannot get the user without the right password" do
@@ -12,11 +12,11 @@ describe "get user endpoint" do
         valid_email = "original_email5@gmail.com"
         valid_password = "invalid_password"
 
-        valid_credentials = Teachable::Stats::User.get_token(email: valid_email,
+        valid_credentials = Teachable::Stats.get_token(email: valid_email,
                                                             password: valid_password)
 
-        response = Teachable::Stats::User.get(email: valid_credentials["email"],
-                                              user_token: valid_credentials["tokens"])
+        response = Teachable::Stats.get_user(email: valid_credentials["email"],
+                                            user_token: valid_credentials["tokens"])
 
         expect(response).to eq(expected_error)
         expect(response["token"]).to be_falsey
@@ -28,9 +28,9 @@ describe "get user endpoint" do
         valid_email = "some_user_new6@gmail.com"
         valid_password = "password"
 
-        valid_credentials = Teachable::Stats::User.get_token(email: valid_email,
+        valid_credentials = Teachable::Stats.get_token(email: valid_email,
                                                             password: valid_password)
-        valid_user_response = Teachable::Stats::User.get(email: valid_credentials["email"],
+        valid_user_response = Teachable::Stats.get_user(email: valid_credentials["email"],
                                                         user_token: valid_credentials["tokens"])
 
         expect(valid_user_response["email"]).to eq("some_user_new6@gmail.com")
