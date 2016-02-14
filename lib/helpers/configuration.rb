@@ -23,7 +23,7 @@ module Configuration
   # 1. we are opening up the singleton class/metaclass only in order to retrieve "self"
   # 2. next, we are calling instance_eval to define a method on the self which is whatever class we
   # include this module in.
-  # 3. The &block, due to the ampersand, refers to the block we pass to the define_class_method method.
+  # 3. The &block, due to the ampersand, refers to the block we pass to the define_class_method method.j
   def define_class_method(name, &block)
     (class << self; self; end).instance_eval do
       define_method name, &block
