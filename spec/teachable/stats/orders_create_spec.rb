@@ -35,12 +35,12 @@ describe "#create_order" do
   end
 
 
-  xit "creates one order by default if you don't supply a number" do
-    VCR.use_cassette("order_missing_number") do
+  it "creates one order by default if you don't supply a number" do
+    VCR.use_cassette("order_missing_number", record: :all) do
       valid_order_call = Proc.new { Teachable::Stats.create_order(number: 1,
                                               total: 2,
                                               total_quantity: 3,
-                                              email: "jwan622@gmail.com"
+                                              email: "valid_email1@example.com"
                                               ) }
 
       expect { valid_order_call.call }.to_not raise_error
@@ -51,5 +51,9 @@ describe "#create_order" do
     VCR.use_cassette("order_returns_array_orders", :re_record_interval => 60 * 60 * 24 * 7) do
 
     end
+  end
+
+  xit "returns an unauthorized page message if the email is invalid" do
+    expect(response).to eq("You are not authorized to access this page.")
   end
 end

@@ -5,14 +5,14 @@ http_interactions:
     uri: https://fast-bayou-75985.herokuapp.com/api/orders.json
     body:
       encoding: US-ASCII
-      string: order[total]=2&order[total_quantity]=3&order[email]=jwan622%40gmail.com&order[special_instructions]=special%20instructions%20foo%20bar
+      string: params[user_email]=valid_email1%40example.com&params[user_token]=-y9s9TyMHdWmniBLfE8i&order[total]=2&order[total_quantity]=3&order[email]=valid_email1%40example.com&order[special_instructions]=special%20instructions%20foo%20bar
     headers:
       Accept:
       - application/json
       Accept-Encoding:
       - gzip, deflate
       Content-Length:
-      - '134'
+      - '227'
       Content-Type:
       - application/x-www-form-urlencoded
       User-Agent:
@@ -35,13 +35,13 @@ http_interactions:
       Cache-Control:
       - no-cache
       X-Request-Id:
-      - 33fe42be-0f04-462f-a09b-63e6b73fcb87
+      - eada2169-cf83-4ab7-9bc8-0cbda048ae65
       X-Runtime:
-      - '0.003205'
+      - '0.004070'
       Server:
       - WEBrick/1.3.1 (Ruby/2.2.4/2015-12-16)
       Date:
-      - Sun, 14 Feb 2016 18:24:26 GMT
+      - Sun, 14 Feb 2016 22:23:44 GMT
       Content-Length:
       - '61'
       Via:
@@ -50,5 +50,5 @@ http_interactions:
       encoding: UTF-8
       string: '{"error":"You need to sign in or sign up before continuing."}'
     http_version: 
-  recorded_at: Sun, 14 Feb 2016 18:24:26 GMT
+  recorded_at: Sun, 14 Feb 2016 22:23:44 GMT
 recorded_with: VCR 3.0.1

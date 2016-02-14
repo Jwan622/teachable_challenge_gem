@@ -7,17 +7,22 @@ module Teachable
         base_url = "https://fast-bayou-75985.herokuapp.com/api/orders.json"
         header = { accept: :json }
         response_total_orders = []
+        require 'pry' ; binding.pry
         number.times do
           response_total_orders = RestClient.post base_url,
-                                  { order: {
-                                        total: total,
-                                        total_quantity: total_quantity,
-                                        email: email,
-                                        special_instructions: "special instructions foo bar"
-                                    }},
-                                    header
+                                  { params: { user_email: self.user_email,
+                                              user_token: self.user_token
+                                    },
+                                    order: {
+                                      total: total,
+                                      total_quantity: total_quantity,
+                                      email: email,
+                                      special_instructions: "special instructions foo bar"
+                                    }
+                                  },
+                                  header
+        require 'pry' ; binding.pry
         end
-
         response_total_orders.map do |response|
           JSON.parse(response.body)
         end
