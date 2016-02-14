@@ -1,5 +1,4 @@
-require 'open-uri'
-require 'rest-client'
+require './lib/teachable/stats'
 
 module Teachable
   module Stats
