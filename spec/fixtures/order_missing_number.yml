@@ -1,0 +1,54 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://fast-bayou-75985.herokuapp.com/api/orders.json
+    body:
+      encoding: US-ASCII
+      string: order[total]=2&order[total_quantity]=3&order[email]=jwan622%40gmail.com&order[special_instructions]=special%20instructions%20foo%20bar
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      Content-Length:
+      - '134'
+      Content-Type:
+      - application/x-www-form-urlencoded
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 401
+      message: 'Unauthorized '
+    headers:
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-cache
+      X-Request-Id:
+      - 33fe42be-0f04-462f-a09b-63e6b73fcb87
+      X-Runtime:
+      - '0.003205'
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.2.4/2015-12-16)
+      Date:
+      - Sun, 14 Feb 2016 18:24:26 GMT
+      Content-Length:
+      - '61'
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"error":"You need to sign in or sign up before continuing."}'
+    http_version: 
+  recorded_at: Sun, 14 Feb 2016 18:24:26 GMT
+recorded_with: VCR 3.0.1
