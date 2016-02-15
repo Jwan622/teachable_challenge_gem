@@ -65,6 +65,7 @@ describe "#create_order" do
 
       valid_orders = valid_order_call.call
 
+      expect(valid_orders).to be_a(Array)
       expect(valid_orders.count).to eql(2)
       expect(valid_orders.first["total"]).to eq("2.0")
       expect(valid_orders[1]["total"]).to eq("2.0")
@@ -75,7 +76,34 @@ describe "#create_order" do
     end
   end
 
-  xit "returns an unauthorized page message if the email is invalid" do
-    expect(response).to eq("You are not authorized to access this page.")
+  it "returns an unauthorized page message if the email is invalid" do
+    VCR.use_cassette("order_returns_unauthorized_message_no_message") do
+      expected_error_message = "Something went wrong when trying to register. These are your errors: You are not authorized to access this page."
+
+      invalid_order_call = Proc.new { Teachable::Stats.create_order(number: 1,
+                                              total: 2,
+                                              total_quantity: 3,
+                                              email: "invalid_email1@example.com"
+                                              ) }
+
+      response = invalid_order_call.call
+      expect(response).to eq(expected_error_message)
+    end
+  end
+
+  it "returns an unauthorized page message if no user_token is provided" do
+    VCR.use_cassette("order_returns_unauthorized_message_no_token") do
+      expected_error_message = "Something went wrong when trying to register. These are your errors: You need to sign in or sign up before continuing."
+      Teachable::Stats.user_token = nil
+
+      invalid_order_call = Proc.new { Teachable::Stats.create_order(number: 1,
+                                              total: 2,
+                                              total_quantity: 3,
+                                              email: "valid_email1@example.com"
+                                              ) }
+
+      response = invalid_order_call.call
+      expect(response).to eq(expected_error_message)
+    end
   end
 end

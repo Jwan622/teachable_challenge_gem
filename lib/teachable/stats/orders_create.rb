@@ -23,9 +23,8 @@ module Teachable
           JSON.parse(response.body)
         end
       rescue => e
-
         errors = JSON.parse(e.response)
-        errors_formatted = errors["error"]
+        errors_formatted = errors["errors"].to_s + errors["error"].to_s
         "Something went wrong when trying to register. These are your errors: #{errors_formatted}"
       end
     end
