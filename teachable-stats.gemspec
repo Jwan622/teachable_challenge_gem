@@ -11,7 +11,7 @@ Gem::Specification.new do |spec|
 
   spec.summary       = %q{This is a wrapper for the mock Teachable API}
   spec.description   = %q{The teachable-stats gem is a wrapper for the Teachable API. Hopefully this saves you time!}
-  spec.homepage      = "https://github.com/Jwan622/teachable_challenge_gem/blob/master/lib/teachable/stats.rb"
+  spec.homepage      = "https://github.com/Jwan622/teachable_challenge_gem"
 
   # Prevent pushing this gem to RubyGems.org by setting 'allowed_push_host', or
   # delete this section to allow pushing this gem to any host.
