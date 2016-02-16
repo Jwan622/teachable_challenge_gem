@@ -9,18 +9,6 @@ VCR.configure do |c|
   c.hook_into :webmock
 end
 
-class AuthenticationError < StandardError
-  def initialize(msg="You need to call #authenticate first and pass in your email and password. For example: Teachable::Stats.authenticate(email: 'YourEmail@example.com', password: 'password')")
-    super
-  end
-end
-
-class RegistrationError < StandardError
-  def initialize(msg="That username and password combination is incorrect. I think you need to register first.")
-    super
-  end
-end
-
 def delete_all_orders_of_current_user
   VCR.use_cassette("current_user_all_orders", record: :all) do
     raise AuthenticationError if Teachable::Stats.user_token == nil || Teachable::Stats.user_email == nil
