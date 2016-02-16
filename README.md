@@ -289,7 +289,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/teachable-stats.
+Bug reports and pull requests are welcome on GitHub at https://github.com/Jwan622/teachable-stats.
 
 Many thanks to the development team:
 - Jeffrey Wan
