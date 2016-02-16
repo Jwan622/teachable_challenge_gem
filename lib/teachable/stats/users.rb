@@ -2,11 +2,11 @@ require './lib/teachable/stats'
 
 module Teachable
   module Stats
-    def self.get_user(email: self.user_email, user_token: self.user_token)
+    def self.get_user
       begin
         base_url = "https://fast-bayou-75985.herokuapp.com/api/users/current_user/edit.json"
-        response = RestClient.get base_url, params: { user_email: email,
-                                                      user_token: user_token }
+        response = RestClient.get base_url, params: { user_email: self.user_email,
+                                                      user_token: self.user_token }
         JSON.parse(response.body)
       rescue => e
         errors = JSON.parse(e.response)
