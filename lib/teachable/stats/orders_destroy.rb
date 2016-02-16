@@ -11,9 +11,15 @@ module Teachable
                                     }
         "Order with id: #{order_id} deleted." if response == ""
       rescue => e
-        errors = JSON.parse(e.response)
-        errors_formatted = "That order_id does not exist" if errors["error"] == "Not Found"
-        "Something went wrong when trying to delete that order. These are your errors: #{errors_formatted}"
+        if e.class == RestClient::Unauthorized
+          errors = JSON.parse(e.response)
+          errors_formatted = errors["error"]
+          "#{errors_formatted}"
+        else
+          errors = JSON.parse(e.response)
+          errors_formatted = "That order_id does not exist" if errors["error"] == "Not Found"
+          "Something went wrong when trying to delete that order. These are your errors: #{errors_formatted}"
+        end
       end
     end
   end

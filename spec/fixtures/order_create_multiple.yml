@@ -1,0 +1,220 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://fast-bayou-75985.herokuapp.com/users/sign_in.json
+    body:
+      encoding: US-ASCII
+      string: user[email]=valid_email1%40example.com&user[password]=password
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      Content-Length:
+      - '62'
+      Content-Type:
+      - application/x-www-form-urlencoded
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 201
+      message: 'Created '
+    headers:
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Location:
+      - https://fast-bayou-75985.herokuapp.com/
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"6db43d4eb8212ca1c03c459a6283d5b7"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 98ad504d-7b7a-436d-b2b3-4407b8ccd87a
+      X-Runtime:
+      - '0.096643'
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.2.4/2015-12-16)
+      Date:
+      - Tue, 16 Feb 2016 01:06:46 GMT
+      Content-Length:
+      - '197'
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"id":36,"name":null,"nickname":null,"image":null,"email":"valid_email1@example.com","tokens":"-y9s9TyMHdWmniBLfE8i","created_at":"2016-02-14T20:53:19.896Z","updated_at":"2016-02-16T01:06:46.732Z"}'
+    http_version: 
+  recorded_at: Tue, 16 Feb 2016 01:06:46 GMT
+- request:
+    method: post
+    uri: https://fast-bayou-75985.herokuapp.com/api/orders.json?user_email=valid_email1@example.com&user_token=-y9s9TyMHdWmniBLfE8i
+    body:
+      encoding: US-ASCII
+      string: order[total]=2&order[total_quantity]=3&order[email]=valid_email1%40example.com&order[special_instructions]=special%20instructions%20foo%20bar
+    headers:
+      Accept:
+      - "*/*; q=0.5, application/xml"
+      Accept-Encoding:
+      - gzip, deflate
+      Content-Length:
+      - '141'
+      Content-Type:
+      - application/x-www-form-urlencoded
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: 'OK '
+    headers:
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"2ff21ab97674185f1d54067b76bc3775"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 6394460d-bbd5-414e-af40-3d3691b2a2d8
+      X-Runtime:
+      - '0.032744'
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.2.4/2015-12-16)
+      Date:
+      - Tue, 16 Feb 2016 01:06:47 GMT
+      Content-Length:
+      - '240'
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"id":127,"number":"d07cc39adea05d16","total":"2.0","total_quantity":3,"email":"valid_email1@example.com","special_instructions":"special
+        instructions foo bar","created_at":"2016-02-16T01:06:47.637Z","updated_at":"2016-02-16T01:06:47.637Z"}'
+    http_version: 
+  recorded_at: Tue, 16 Feb 2016 01:06:47 GMT
+- request:
+    method: post
+    uri: https://fast-bayou-75985.herokuapp.com/api/orders.json?user_email=valid_email1@example.com&user_token=-y9s9TyMHdWmniBLfE8i
+    body:
+      encoding: US-ASCII
+      string: order[total]=2&order[total_quantity]=3&order[email]=valid_email1%40example.com&order[special_instructions]=special%20instructions%20foo%20bar
+    headers:
+      Accept:
+      - "*/*; q=0.5, application/xml"
+      Accept-Encoding:
+      - gzip, deflate
+      Content-Length:
+      - '141'
+      Content-Type:
+      - application/x-www-form-urlencoded
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: 'OK '
+    headers:
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"60b0a5478065ad4725a36b72c4126e2b"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 3d8fb699-fd77-4e3b-b39d-bf040b231c4f
+      X-Runtime:
+      - '0.035202'
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.2.4/2015-12-16)
+      Date:
+      - Tue, 16 Feb 2016 01:06:47 GMT
+      Content-Length:
+      - '240'
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"id":128,"number":"917f3d7c9212e424","total":"2.0","total_quantity":3,"email":"valid_email1@example.com","special_instructions":"special
+        instructions foo bar","created_at":"2016-02-16T01:06:47.751Z","updated_at":"2016-02-16T01:06:47.751Z"}'
+    http_version: 
+  recorded_at: Tue, 16 Feb 2016 01:06:47 GMT
+- request:
+    method: post
+    uri: https://fast-bayou-75985.herokuapp.com/api/orders.json?user_email=valid_email1@example.com&user_token=-y9s9TyMHdWmniBLfE8i
+    body:
+      encoding: US-ASCII
+      string: order[total]=2&order[total_quantity]=3&order[email]=valid_email1%40example.com&order[special_instructions]=special%20instructions%20foo%20bar
+    headers:
+      Accept:
+      - "*/*; q=0.5, application/xml"
+      Accept-Encoding:
+      - gzip, deflate
+      Content-Length:
+      - '141'
+      Content-Type:
+      - application/x-www-form-urlencoded
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: 'OK '
+    headers:
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"36fadaee7aa0142f2c1674580a500fc7"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - e1d36205-5870-4158-ae93-1ffe480d7999
+      X-Runtime:
+      - '0.043233'
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.2.4/2015-12-16)
+      Date:
+      - Tue, 16 Feb 2016 01:06:47 GMT
+      Content-Length:
+      - '240'
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"id":129,"number":"2ab8fb9787e65688","total":"2.0","total_quantity":3,"email":"valid_email1@example.com","special_instructions":"special
+        instructions foo bar","created_at":"2016-02-16T01:06:47.878Z","updated_at":"2016-02-16T01:06:47.878Z"}'
+    http_version: 
+  recorded_at: Tue, 16 Feb 2016 01:06:47 GMT
+recorded_with: VCR 3.0.1

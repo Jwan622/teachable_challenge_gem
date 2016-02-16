@@ -4,9 +4,9 @@ module Teachable
   module Stats
     def self.authenticate(email:, password:)
       begin
-        response_with_token = get_token(email: email, password: password)
-        raise RegistrationError if failed_authentication?(response_with_token)
-        self.user_email, self.user_token = response_with_token["email"], response_with_token["tokens"]
+        user_credentials = get_token(email: email, password: password)
+        raise RegistrationError if failed_authentication?(user_credentials)
+        self.user_email, self.user_token = user_credentials["email"], user_credentials["tokens"]
         "Logged in as user: #{self.user_email} with token: #{self.user_token}"
       rescue => e
         if e.class == RegistrationError
