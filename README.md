@@ -113,12 +113,12 @@ Let's see how to make requests to all 4!
 Teachable::Stats.get_user
 ```
 
-**Orders*get**
+**Orders#get**
 ```ruby
 Teachable::Stats.get_orders
 ```
 
-**Orders*post**
+**Orders#post**
 ```ruby
 Teachable::Stats.create_my_order(number: 1, total: 2.0, total_quantity: 3, email: "valid_email1@example.com")
 ```
@@ -127,6 +127,7 @@ In the above convenience method for creating_orders, you currently need to provi
 
 The above method will create an order for the authenticated user. See this:
 
+**Orders#destroy**
 ```ruby
 Teachable::Stats.destroy_my_order(order_id: 2)
 ```
