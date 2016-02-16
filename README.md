@@ -74,28 +74,28 @@ You need to set your :user_email and :user_token prior to making API requests to
 
 1. In your application, you can write this code to manually configure your gem:
 
-```ruby
-Teachable::Stats.configuration do |config|
-  config.user_email = "your_email@example.com"
-  config.user_token = "some_secure_random_string_goes_here_that_you_can_get_via_the_get_token_method"
-end
-```
+  ```ruby
+  Teachable::Stats.configuration do |config|
+    config.user_email = "your_email@example.com"
+    config.user_token = "some_secure_random_string_goes_here_that_you_can_get_via_the_get_token_method"
+  end
+  ```
 
-Again, the user_email and user_token can be obtained via the .get_token method provided by the gem.
+  Again, the user_email and user_token can be obtained via the .get_token method provided by the gem.
 
 2. You can also configure your gem using the gem's .authenticate convenience method. This is how you can use the convenience method.
 
-```ruby
-Teachable::Stats.authenticate(email: "valid_email1@example.com", password: "password")
-```
+  ```ruby
+  Teachable::Stats.authenticate(email: "valid_email1@example.com", password: "password")
+  ```
 
-Give that above method a try! That email and password are valid. You should see something like this return:
+  Give that above method a try! That email and password are valid. You should see something like this return:
 
-```
-"Logged in as user: valid_email1@example.com with token: -y9s9TyMHdWmniBLfE8i"
-```
+  ```
+  "Logged in as user: valid_email1@example.com with token: -y9s9TyMHdWmniBLfE8i"
+  ```
 
-Behind the scenes, that sets the class variables called user_email and user_token to the email and user_token that are shown in the string. All you need to provide to the authenticate convenience method are your already registered and valid email and password. That's it!
+  Behind the scenes, that sets the class variables called user_email and user_token to the email and user_token that are shown in the string. All you need to provide to the authenticate convenience method are your already registered and valid email and password. That's it!
 
 ## Making queries to the Teachable API
 
