@@ -24,7 +24,7 @@ Or install it yourself as:
 
 ## Usage
 
-On a high-level, this is how we will use the API:
+On a high-level, this is how we will use the API:  
 1. Register for the API
 2. Authenticate/Configure the gem for API use. (This doesn't actually truly authenticate with the API... it really just sets the class variables user_email and user_token so that they can be sent along with the API requests)
 3. Make API calls using the #get_user, #get_orders, #create_my_order, #destroy_my_order methods.
