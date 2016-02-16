@@ -17,7 +17,7 @@ module Teachable
       rescue => e
         errors = JSON.parse(e.response)
         errors_formatted = errors["error"]
-        "Something went wrong when trying to register. These are your errors: #{errors_formatted}"
+        "Something went wrong when trying to get your user info and token. These are your errors: #{errors_formatted}"
       end
     end
   end

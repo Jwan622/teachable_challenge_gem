@@ -1,0 +1,433 @@
+---
+http_interactions:
+- request:
+    method: delete
+    uri: https://fast-bayou-75985.herokuapp.com/api/orders/110.json?user_email=valid_email1@example.com&user_token=-y9s9TyMHdWmniBLfE8i
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*; q=0.5, application/xml"
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 204
+      message: 'No Content '
+    headers:
+      Content-Length:
+      - '0'
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Cache-Control:
+      - no-cache
+      X-Request-Id:
+      - 031a9708-c148-4ac9-800c-41456ffcd6dc
+      X-Runtime:
+      - '0.065226'
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.2.4/2015-12-16)
+      Date:
+      - Tue, 16 Feb 2016 00:00:11 GMT
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Tue, 16 Feb 2016 00:00:10 GMT
+- request:
+    method: get
+    uri: https://fast-bayou-75985.herokuapp.com/api/orders.json?user_email=new_user1@example.com&user_token=Uc3sdEmPj59Sz-mxjdcQ
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*; q=0.5, application/xml"
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: 'OK '
+    headers:
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"a53cd0c5e431a1070fcd587feec9968d"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 80f0934d-4f31-4acb-82f3-7f24e96d14b1
+      X-Runtime:
+      - '0.092080'
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.2.4/2015-12-16)
+      Date:
+      - Tue, 16 Feb 2016 00:00:13 GMT
+      Content-Length:
+      - '477'
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '[{"id":113,"number":"6d69c07c09091914","total":"3.0","total_quantity":3,"email":"new_user1@example.com","special_instructions":"special
+        instructions foo bar","created_at":"2016-02-16T00:00:12.958Z","updated_at":"2016-02-16T00:00:12.958Z"},{"id":114,"number":"e06c2f44a590358a","total":"3.0","total_quantity":3,"email":"new_user1@example.com","special_instructions":"special
+        instructions foo bar","created_at":"2016-02-16T00:00:13.182Z","updated_at":"2016-02-16T00:00:13.182Z"}]'
+    http_version: 
+  recorded_at: Tue, 16 Feb 2016 00:00:13 GMT
+- request:
+    method: delete
+    uri: https://fast-bayou-75985.herokuapp.com/api/orders/113.json?user_email=new_user1@example.com&user_token=Uc3sdEmPj59Sz-mxjdcQ
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*; q=0.5, application/xml"
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 404
+      message: 'Not Found '
+    headers:
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '36'
+      X-Request-Id:
+      - 2b37461b-6212-45b3-b19c-3b0d58f774ff
+      X-Runtime:
+      - '0.110877'
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.2.4/2015-12-16)
+      Date:
+      - Tue, 16 Feb 2016 00:04:46 GMT
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"status":"404","error":"Not Found"}'
+    http_version: 
+  recorded_at: Tue, 16 Feb 2016 00:04:46 GMT
+- request:
+    method: delete
+    uri: https://fast-bayou-75985.herokuapp.com/api/orders/114.json?user_email=new_user1@example.com&user_token=Uc3sdEmPj59Sz-mxjdcQ
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*; q=0.5, application/xml"
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 404
+      message: 'Not Found '
+    headers:
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '36'
+      X-Request-Id:
+      - 380a6a40-c7da-41e5-b463-f181f6e01f06
+      X-Runtime:
+      - '0.174618'
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.2.4/2015-12-16)
+      Date:
+      - Tue, 16 Feb 2016 00:04:46 GMT
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"status":"404","error":"Not Found"}'
+    http_version: 
+  recorded_at: Tue, 16 Feb 2016 00:04:46 GMT
+- request:
+    method: delete
+    uri: https://fast-bayou-75985.herokuapp.com/api/orders/115.json?user_email=original_email10@example.com&user_token=PtFa6g5HHFSmx2z9pjdZ
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*; q=0.5, application/xml"
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 404
+      message: 'Not Found '
+    headers:
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '36'
+      X-Request-Id:
+      - 2816bb51-0f5c-4fe7-b42b-f06a9fc4c380
+      X-Runtime:
+      - '0.020833'
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.2.4/2015-12-16)
+      Date:
+      - Tue, 16 Feb 2016 00:21:34 GMT
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"status":"404","error":"Not Found"}'
+    http_version: 
+  recorded_at: Tue, 16 Feb 2016 00:21:34 GMT
+- request:
+    method: delete
+    uri: https://fast-bayou-75985.herokuapp.com/api/orders/116.json?user_email=original_email10@example.com&user_token=PtFa6g5HHFSmx2z9pjdZ
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*; q=0.5, application/xml"
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 404
+      message: 'Not Found '
+    headers:
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '36'
+      X-Request-Id:
+      - 21d92d47-8e45-42ae-bf14-058b71068012
+      X-Runtime:
+      - '0.027185'
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.2.4/2015-12-16)
+      Date:
+      - Tue, 16 Feb 2016 00:21:34 GMT
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"status":"404","error":"Not Found"}'
+    http_version: 
+  recorded_at: Tue, 16 Feb 2016 00:21:34 GMT
+- request:
+    method: get
+    uri: https://fast-bayou-75985.herokuapp.com/api/orders.json?user_email=original_email10@example.com&user_token=PtFa6g5HHFSmx2z9pjdZ
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*; q=0.5, application/xml"
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: 'OK '
+    headers:
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"85fc2aad49e06383e8f1d78d0b5b8421"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - ea91367c-42e9-4a05-a9e2-b5304446bf57
+      X-Runtime:
+      - '0.061701'
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.2.4/2015-12-16)
+      Date:
+      - Tue, 16 Feb 2016 00:24:02 GMT
+      Content-Length:
+      - '491'
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '[{"id":117,"number":"1de88ca8930ee665","total":"3.0","total_quantity":3,"email":"original_email10@example.com","special_instructions":"special
+        instructions foo bar","created_at":"2016-02-16T00:23:50.704Z","updated_at":"2016-02-16T00:23:50.704Z"},{"id":118,"number":"5daf9c51d6d56105","total":"3.0","total_quantity":3,"email":"original_email10@example.com","special_instructions":"special
+        instructions foo bar","created_at":"2016-02-16T00:23:50.838Z","updated_at":"2016-02-16T00:23:50.838Z"}]'
+    http_version: 
+  recorded_at: Tue, 16 Feb 2016 00:24:02 GMT
+- request:
+    method: get
+    uri: https://fast-bayou-75985.herokuapp.com/api/orders.json?user_email=valid_email1@example.com&user_token=-y9s9TyMHdWmniBLfE8i
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*; q=0.5, application/xml"
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: 'OK '
+    headers:
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"d751713988987e9331980363e24189ce"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 0b218ac8-4d69-4a1e-8a04-ef96494f7f92
+      X-Runtime:
+      - '0.026917'
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.2.4/2015-12-16)
+      Date:
+      - Tue, 16 Feb 2016 00:44:29 GMT
+      Content-Length:
+      - '2'
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: "[]"
+    http_version: 
+  recorded_at: Tue, 16 Feb 2016 00:44:29 GMT
+- request:
+    method: delete
+    uri: https://fast-bayou-75985.herokuapp.com/api/orders/117.json?user_email=original_email10@example.com&user_token=PtFa6g5HHFSmx2z9pjdZ
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*; q=0.5, application/xml"
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 404
+      message: 'Not Found '
+    headers:
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '36'
+      X-Request-Id:
+      - 83833c96-4549-4642-9d07-bb8ceb3445a5
+      X-Runtime:
+      - '0.027803'
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.2.4/2015-12-16)
+      Date:
+      - Tue, 16 Feb 2016 00:44:30 GMT
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"status":"404","error":"Not Found"}'
+    http_version: 
+  recorded_at: Tue, 16 Feb 2016 00:44:30 GMT
+- request:
+    method: delete
+    uri: https://fast-bayou-75985.herokuapp.com/api/orders/118.json?user_email=original_email10@example.com&user_token=PtFa6g5HHFSmx2z9pjdZ
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*; q=0.5, application/xml"
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 404
+      message: 'Not Found '
+    headers:
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '36'
+      X-Request-Id:
+      - bb199a46-8c24-4b04-b697-8fcb80c0b619
+      X-Runtime:
+      - '0.019495'
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.2.4/2015-12-16)
+      Date:
+      - Tue, 16 Feb 2016 00:44:30 GMT
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"status":"404","error":"Not Found"}'
+    http_version: 
+  recorded_at: Tue, 16 Feb 2016 00:44:30 GMT
+recorded_with: VCR 3.0.1

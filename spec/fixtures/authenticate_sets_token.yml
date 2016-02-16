@@ -35,24 +35,24 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"9912f151a56271bbbce6d3070cdc07a7"
+      - W/"17f6bcd1101a64643ebcc331417774ce"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 43c6f720-17a9-4e51-b411-d10cf7f126e3
+      - 179f91ef-c043-484e-8a4b-4d57e4aa9d60
       X-Runtime:
-      - '0.102258'
+      - '0.107547'
       Server:
       - WEBrick/1.3.1 (Ruby/2.2.4/2015-12-16)
       Date:
-      - Sun, 14 Feb 2016 21:00:05 GMT
+      - Tue, 16 Feb 2016 00:00:07 GMT
       Content-Length:
       - '197'
       Via:
       - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"id":36,"name":null,"nickname":null,"image":null,"email":"valid_email1@example.com","tokens":"-y9s9TyMHdWmniBLfE8i","created_at":"2016-02-14T20:53:19.896Z","updated_at":"2016-02-14T21:00:05.873Z"}'
+      string: '{"id":36,"name":null,"nickname":null,"image":null,"email":"valid_email1@example.com","tokens":"-y9s9TyMHdWmniBLfE8i","created_at":"2016-02-14T20:53:19.896Z","updated_at":"2016-02-16T00:00:07.382Z"}'
     http_version: 
-  recorded_at: Sun, 14 Feb 2016 21:00:05 GMT
+  recorded_at: Tue, 16 Feb 2016 00:00:07 GMT
 recorded_with: VCR 3.0.1

@@ -2,14 +2,14 @@ require './lib/teachable/stats'
 
 module Teachable
   module Stats
-    def self.get_orders(email:, user_token:)
+    def self.get_orders
       begin
         base_url = "https://fast-bayou-75985.herokuapp.com/api/orders.json"
         header = { accept: :json }
         response = RestClient.get base_url,
                                   params: {
-                                      user_email: email,
-                                      user_token: user_token
+                                      user_email: self.user_email,
+                                      user_token: self.user_token
                                   }
         JSON.parse(response.body)
       rescue => e
