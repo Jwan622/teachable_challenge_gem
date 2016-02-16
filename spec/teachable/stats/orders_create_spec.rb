@@ -34,6 +34,17 @@ describe "#create_my_order" do
     end
   end
 
+  it "cannot create an order with an invalid email" do
+    VCR.use_cassette("order_create_missing_email", :re_record_interval => 60 * 60 * 24 * 7) do
+      invalid_order_call = Proc.new { Teachable::Stats.create_my_order(number: 1,
+                                              total: 2,
+                                              total_quantity: 3,
+                                              email: "this is not an email address"
+                                              ) }
+      require 'pry' ; binding.pry
+      expect { invalid_order_call.call }.to raise_error(ArgumentError, "missing keyword: email")
+    end
+  end
 
   it "creates one order by default if you don't supply a number" do
     VCR.use_cassette("order_create_missing_number") do

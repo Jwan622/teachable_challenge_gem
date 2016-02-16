@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["Jwan622@gmail.com"]
 
   spec.summary       = %q{This is a wrapper for the mock Teachable API}
-  spec.description   = %q{This is the description for the mock Teachable API wrapper gem.}
+  spec.description   = %q{The teachable-stats gem is a wrapper for the Teachable API. Hopefully this saves you time!}
   spec.homepage      = "https://github.com/Jwan622/teachable_challenge_gem/blob/master/lib/teachable/stats.rb"
 
   # Prevent pushing this gem to RubyGems.org by setting 'allowed_push_host', or

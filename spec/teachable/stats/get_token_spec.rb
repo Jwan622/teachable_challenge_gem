@@ -9,7 +9,6 @@ describe "#get_token" do
 
       response_invalid = Teachable::Stats.get_token(email: nonregistered_email,
                                                     password: valid_password)
-
       expect(response_invalid).to eq(expected_invalid_login_message)
       expect(response_invalid["tokens"]).to be_falsey
     end
