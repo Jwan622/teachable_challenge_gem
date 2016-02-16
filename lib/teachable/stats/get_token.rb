@@ -15,9 +15,11 @@ module Teachable
                                     header
         JSON.parse(response.body)
       rescue => e
-        errors = JSON.parse(e.response)
-        errors_formatted = errors["error"]
-        "Something went wrong when trying to get your user info and token. These are your errors: #{errors_formatted}"
+        if e.class == RestClient::Unauthorized
+          errors = JSON.parse(e.response)
+          errors_formatted = errors["error"]
+          "Something went wrong when trying to get your user info and token. These are your errors: #{errors_formatted}"
+        end
       end
     end
   end
