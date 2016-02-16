@@ -24,7 +24,13 @@ Or install it yourself as:
 
 ## Usage
 
+On a high-level, this is how we will use the API:
+1. Register for the API
+2. Authenticate/Configure the gem for API use. (This doesn't actually truly authenticate with the API... it really just sets the class variables user_email and user_token so that they can be sent along with the API requests)
+3. Make API calls using the #get_user, #get_orders, #create_my_order, #destroy_my_order methods.
+
 **Registering to the API**
+
 In order to use the gem, you first need to register an account with Teachable. You used to have to make a complicated post request directly to Teachable's API via this complicated curl request:
 
 ```bash
@@ -40,6 +46,7 @@ Teachable::Stats.register(email: "new_email@example.com", password: "8LettersLon
 Note the password field has to be at least 8 letters long and the email address cannot already exist in the database.
 
 **Getting user_token and credentials**
+
 If you are an already registered user and simply want your credentials sent back to you, you can simply get your credentials via this .get_token convenience method
 
 ```ruby
@@ -62,6 +69,7 @@ That will return your credentials, including your token, in this form:
 Note the returned value of the .get_token method is a ruby hash and it does not show your password. However, it does have your user_token which you need to use to configure your gem.
 
 **Configuring your gem**
+
 You need to set your :user_email and :user_token prior to making API requests to the Teachable API. Configuring your gem simply means providing the gem your registered user email and user_token. There are two ways to do this:
 
 1. In your application, you can write this code to manually configure your gem:
