@@ -2,7 +2,7 @@ require './lib/teachable/stats'
 
 module Teachable
   module Stats
-    def self.create_order(number: 1, total:, total_quantity:, email:)
+    def self.create_my_order(number: 1, total:, total_quantity:, email:)
       begin
         base_url = "https://fast-bayou-75985.herokuapp.com/api/orders.json"
         response_total_orders = []
@@ -25,7 +25,7 @@ module Teachable
       rescue => e
         errors = JSON.parse(e.response)
         errors_formatted = errors["errors"].to_s + errors["error"].to_s
-        "Something went wrong when trying to register. These are your errors: #{errors_formatted}"
+        "Something went wrong when trying to create that order. These are your errors: #{errors_formatted}"
       end
     end
   end

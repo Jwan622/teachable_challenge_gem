@@ -5,7 +5,7 @@ http_interactions:
     uri: https://fast-bayou-75985.herokuapp.com/users.json
     body:
       encoding: US-ASCII
-      string: user[email]=original_email4%40gmail.com&user[password]=password&user[password_confirmation]=password
+      string: user[email]=original_email6%40gmail.com&user[password]=password&user[password_confirmation]=password
     headers:
       Accept:
       - application/json
@@ -35,24 +35,24 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"faf264681c25cbe1473c7cc4cc98109f"
+      - W/"527c223c1a8a3c80ebe4fbe9493fc540"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 83c77c5e-0f3e-447c-8790-80f20e02b443
+      - 1d96e582-beb3-484b-affe-eade3388164f
       X-Runtime:
-      - '0.239936'
+      - '0.115626'
       Server:
       - WEBrick/1.3.1 (Ruby/2.2.4/2015-12-16)
       Date:
-      - Thu, 11 Feb 2016 21:48:19 GMT
+      - Tue, 16 Feb 2016 00:03:16 GMT
       Content-Length:
       - '198'
       Via:
       - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"id":22,"name":null,"nickname":null,"image":null,"email":"original_email4@gmail.com","tokens":"zdyxwUsD8U2j5jbh_7Zz","created_at":"2016-02-11T21:48:19.798Z","updated_at":"2016-02-11T21:48:19.851Z"}'
+      string: '{"id":39,"name":null,"nickname":null,"image":null,"email":"original_email6@gmail.com","tokens":"8Mc2CosSJE3dJGaKzLTX","created_at":"2016-02-16T00:03:16.753Z","updated_at":"2016-02-16T00:03:16.765Z"}'
     http_version: 
-  recorded_at: Thu, 11 Feb 2016 21:48:20 GMT
+  recorded_at: Tue, 16 Feb 2016 00:03:16 GMT
 recorded_with: VCR 3.0.1

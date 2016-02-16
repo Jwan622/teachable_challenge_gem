@@ -5,22 +5,22 @@ http_interactions:
     uri: https://fast-bayou-75985.herokuapp.com/users/sign_in.json
     body:
       encoding: US-ASCII
-      string: user[email]=original_email5%40gmail.com&user[password]=invalid_password
+      string: user[email]=some_user_new6%40gmail.com&user[password]=password
     headers:
       Accept:
       - application/json
       Accept-Encoding:
       - gzip, deflate
       Content-Length:
-      - '71'
+      - '62'
       Content-Type:
       - application/x-www-form-urlencoded
       User-Agent:
       - Ruby
   response:
     status:
-      code: 401
-      message: 'Unauthorized '
+      code: 201
+      message: 'Created '
     headers:
       Connection:
       - keep-alive
@@ -30,30 +30,34 @@ http_interactions:
       - 1; mode=block
       X-Content-Type-Options:
       - nosniff
+      Location:
+      - https://fast-bayou-75985.herokuapp.com/
       Content-Type:
       - application/json; charset=utf-8
+      Etag:
+      - W/"b0b70ba94d2a0d1b2f960bc8724fd80e"
       Cache-Control:
-      - no-cache
+      - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 224593d6-a45d-4e1b-a436-84c8972b7a22
+      - 8722dbb3-760a-4c59-a1c5-62bc96051658
       X-Runtime:
-      - '0.099113'
+      - '0.089611'
       Server:
       - WEBrick/1.3.1 (Ruby/2.2.4/2015-12-16)
       Date:
-      - Sun, 14 Feb 2016 05:18:43 GMT
+      - Tue, 16 Feb 2016 00:15:19 GMT
       Content-Length:
-      - '38'
+      - '197'
       Via:
       - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"error":"Invalid email or password."}'
+      string: '{"id":34,"name":null,"nickname":null,"image":null,"email":"some_user_new6@gmail.com","tokens":"pD4y96BbgAJsPnnyzJgk","created_at":"2016-02-14T01:34:38.912Z","updated_at":"2016-02-16T00:15:19.342Z"}'
     http_version: 
-  recorded_at: Sun, 14 Feb 2016 05:18:43 GMT
+  recorded_at: Tue, 16 Feb 2016 00:15:19 GMT
 - request:
     method: get
-    uri: https://fast-bayou-75985.herokuapp.com/api/users/current_user/edit.json?user_email=email&user_token=
+    uri: https://fast-bayou-75985.herokuapp.com/api/users/current_user/edit.json?user_email=some_user_new6@gmail.com&user_token=pD4y96BbgAJsPnnyzJgk
     body:
       encoding: US-ASCII
       string: ''
@@ -66,8 +70,8 @@ http_interactions:
       - Ruby
   response:
     status:
-      code: 401
-      message: 'Unauthorized '
+      code: 200
+      message: 'OK '
     headers:
       Connection:
       - keep-alive
@@ -79,23 +83,25 @@ http_interactions:
       - nosniff
       Content-Type:
       - application/json; charset=utf-8
+      Etag:
+      - W/"9900d97b35b43438d6c6ba9cdb5630ae"
       Cache-Control:
-      - no-cache
+      - max-age=0, private, must-revalidate
       X-Request-Id:
-      - e3081074-2fbb-457b-b41c-b35cb177fc15
+      - ae3d5f3d-b3d7-4a3b-833e-5d456d9e81aa
       X-Runtime:
-      - '0.007898'
+      - '0.028077'
       Server:
       - WEBrick/1.3.1 (Ruby/2.2.4/2015-12-16)
       Date:
-      - Sun, 14 Feb 2016 05:18:43 GMT
+      - Tue, 16 Feb 2016 00:15:19 GMT
       Content-Length:
-      - '61'
+      - '197'
       Via:
       - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"error":"You need to sign in or sign up before continuing."}'
+      string: '{"id":34,"name":null,"nickname":null,"image":null,"email":"some_user_new6@gmail.com","tokens":"pD4y96BbgAJsPnnyzJgk","created_at":"2016-02-14T01:34:38.912Z","updated_at":"2016-02-16T00:15:19.451Z"}'
     http_version: 
-  recorded_at: Sun, 14 Feb 2016 05:18:43 GMT
+  recorded_at: Tue, 16 Feb 2016 00:15:19 GMT
 recorded_with: VCR 3.0.1
