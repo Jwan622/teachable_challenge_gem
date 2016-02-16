@@ -14,10 +14,8 @@ module Teachable
         JSON.parse(response.body)
       rescue => e
         errors = JSON.parse(e.response)
-        errors_formatted = errors["errors"].map do |error|
-          error[0] + " " + error[1][0]
-        end.join(", ")
-        "Something went wrong when trying to register. These are your errors: #{errors_formatted}"
+        errors_formatted = errors["error"]
+        "#{errors_formatted}"
       end
     end
   end

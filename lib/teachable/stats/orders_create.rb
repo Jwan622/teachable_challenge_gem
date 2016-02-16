@@ -23,9 +23,14 @@ module Teachable
           JSON.parse(response.body)
         end
       rescue => e
-        errors = JSON.parse(e.response)
-        errors_formatted = errors["errors"].to_s + errors["error"].to_s
-        "Something went wrong when trying to create that order. These are your errors: #{errors_formatted}"
+        if e.class == RestClient::Unauthorized
+          errors = JSON.parse(e.response)
+          errors["error"]
+        else
+          errors = JSON.parse(e.response)
+          errors_formatted = errors["errors"].to_s + errors["error"].to_s
+          "Something went wrong when trying to create that order. These are your errors: #{errors_formatted}"
+        end
       end
     end
   end

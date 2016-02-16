@@ -2,6 +2,14 @@ require 'spec_helper'
 
 describe "orders" do
   describe "#get" do
+    it "should not get orders unless authenticated" do
+      VCR.use_cassette("get_orders_unauthenticated") do
+        error_message = "You need to sign in or sign up before continuing."
+
+        response = Teachable::Stats.get_orders
+        expect(response).to eq("#{error_message}")
+      end
+    end
 
     it "should return an empty array if no orders" do
       VCR.use_cassette("get_orders_none") do
