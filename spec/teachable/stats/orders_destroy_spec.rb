@@ -35,12 +35,13 @@ describe "#destroy_order" do
       valid_email = "valid_email1@example.com"
       valid_password = "password"
 
-      #lets create an order
+      #lets create an order and then logout which sets user_token and user_email to nil
       created_order = Teachable::Stats.create_my_order(number:1,
                                                       total:2,
                                                       total_quantity: 3,
                                                       email: "valid_email1@example.com").first
       logout
+      # lets try to destroy an order while logged out
       response = Teachable::Stats.destroy_my_order(order_id: created_order["id"])
       expect(response).to eq("You need to sign in or sign up before continuing.")
 
@@ -49,6 +50,7 @@ describe "#destroy_order" do
                                     password: valid_password)
       last_order = Teachable::Stats.get_orders.last
 
+      #the last order that we created and tried to delete should still be there.
       expect(created_order).to eq(last_order)
     end
   end

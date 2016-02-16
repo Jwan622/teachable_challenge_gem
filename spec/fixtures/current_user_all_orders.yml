@@ -934,6 +934,96 @@ http_interactions:
     http_version: 
   recorded_at: Tue, 16 Feb 2016 01:56:44 GMT
 - request:
+    method: delete
+    uri: https://fast-bayou-75985.herokuapp.com/api/orders/138.json?user_email=valid_email1@example.com&user_token=-y9s9TyMHdWmniBLfE8i
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*; q=0.5, application/xml"
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 204
+      message: 'No Content '
+    headers:
+      Content-Length:
+      - '0'
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Cache-Control:
+      - no-cache
+      X-Request-Id:
+      - 4704b6e7-e9f0-4bb3-bd19-959f0f692d55
+      X-Runtime:
+      - '0.052252'
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.2.4/2015-12-16)
+      Date:
+      - Tue, 16 Feb 2016 01:59:24 GMT
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Tue, 16 Feb 2016 01:59:23 GMT
+- request:
+    method: delete
+    uri: https://fast-bayou-75985.herokuapp.com/api/orders/139.json?user_email=valid_email1@example.com&user_token=-y9s9TyMHdWmniBLfE8i
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*; q=0.5, application/xml"
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 204
+      message: 'No Content '
+    headers:
+      Content-Length:
+      - '0'
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Cache-Control:
+      - no-cache
+      X-Request-Id:
+      - 9e39bc8e-75c9-4c93-9775-e53a9e0eecb8
+      X-Runtime:
+      - '0.054948'
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.2.4/2015-12-16)
+      Date:
+      - Tue, 16 Feb 2016 01:59:24 GMT
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Tue, 16 Feb 2016 01:59:24 GMT
+- request:
     method: get
     uri: https://fast-bayou-75985.herokuapp.com/api/orders.json?user_email=valid_email1@example.com&user_token=-y9s9TyMHdWmniBLfE8i
     body:
@@ -966,13 +1056,13 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 114b89eb-6f48-4547-b75c-390367e37b19
+      - 648760cc-a4ec-4395-a86f-c14a0ca9aad3
       X-Runtime:
-      - '0.042327'
+      - '0.045424'
       Server:
       - WEBrick/1.3.1 (Ruby/2.2.4/2015-12-16)
       Date:
-      - Tue, 16 Feb 2016 01:56:45 GMT
+      - Tue, 16 Feb 2016 02:02:08 GMT
       Content-Length:
       - '2'
       Via:
@@ -981,7 +1071,7 @@ http_interactions:
       encoding: UTF-8
       string: "[]"
     http_version: 
-  recorded_at: Tue, 16 Feb 2016 01:56:45 GMT
+  recorded_at: Tue, 16 Feb 2016 02:02:08 GMT
 - request:
     method: delete
     uri: https://fast-bayou-75985.herokuapp.com/api/orders/117.json?user_email=original_email10@example.com&user_token=PtFa6g5HHFSmx2z9pjdZ
@@ -1007,20 +1097,20 @@ http_interactions:
       Content-Length:
       - '36'
       X-Request-Id:
-      - 89bba7d8-c0e3-46ed-902e-63f9213509eb
+      - de6b46de-6137-4443-9984-d9154cb98a51
       X-Runtime:
-      - '0.034462'
+      - '0.023779'
       Server:
       - WEBrick/1.3.1 (Ruby/2.2.4/2015-12-16)
       Date:
-      - Tue, 16 Feb 2016 01:56:46 GMT
+      - Tue, 16 Feb 2016 02:02:09 GMT
       Via:
       - 1.1 vegur
     body:
       encoding: UTF-8
       string: '{"status":"404","error":"Not Found"}'
     http_version: 
-  recorded_at: Tue, 16 Feb 2016 01:56:46 GMT
+  recorded_at: Tue, 16 Feb 2016 02:02:09 GMT
 - request:
     method: delete
     uri: https://fast-bayou-75985.herokuapp.com/api/orders/118.json?user_email=original_email10@example.com&user_token=PtFa6g5HHFSmx2z9pjdZ
@@ -1046,18 +1136,18 @@ http_interactions:
       Content-Length:
       - '36'
       X-Request-Id:
-      - a8ebe4ca-0968-4857-938a-580327bead7c
+      - 722d194d-a1fb-4dec-ba1f-d1a214508e76
       X-Runtime:
-      - '0.041415'
+      - '0.023482'
       Server:
       - WEBrick/1.3.1 (Ruby/2.2.4/2015-12-16)
       Date:
-      - Tue, 16 Feb 2016 01:56:46 GMT
+      - Tue, 16 Feb 2016 02:02:09 GMT
       Via:
       - 1.1 vegur
     body:
       encoding: UTF-8
       string: '{"status":"404","error":"Not Found"}'
     http_version: 
-  recorded_at: Tue, 16 Feb 2016 01:56:46 GMT
+  recorded_at: Tue, 16 Feb 2016 02:02:09 GMT
 recorded_with: VCR 3.0.1

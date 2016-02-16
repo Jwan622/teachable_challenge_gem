@@ -1,12 +1,15 @@
 require 'spec_helper'
 
 describe "#authenticate" do
+  before(:each) do
+    logout
+  end
+
   it "does not set your user_token and email with invalid credentials" do
     VCR.use_cassette("authenticate_does_not_set_token", record: :all) do
       invalid_email = "invalid_email1@example.com"
       invalid_password = "tooshor"
 
-      logout
       response = Teachable::Stats.authenticate(email: invalid_email,
                                               password: invalid_password
                                               )
