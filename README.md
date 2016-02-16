@@ -25,9 +25,10 @@ Or install it yourself as:
 ## Usage
 
 On a high-level, this is how we will use the API:  
-1. Register for the API
-2. Authenticate/Configure the gem for API use. (This doesn't actually truly authenticate with the API... it really just sets the class variables user_email and user_token so that they can be sent along with the API requests)
-3. Make API calls using the #get_user, #get_orders, #create_my_order, #destroy_my_order methods.
+
+1. Register for the API  
+2. Authenticate/Configure the gem for API use.
+3. Make API calls using the #get_user, #get_orders, #create_my_order, #destroy_my_order methods.  
 
 **Registering to the API**
 
@@ -83,7 +84,7 @@ You need to set your :user_email and :user_token prior to making API requests to
 
   Again, the user_email and user_token can be obtained via the .get_token method provided by the gem.
 
-2. You can also configure your gem using the gem's .authenticate convenience method. This is how you can use the convenience method.
+2. Instead of calling .get_token and manually configuring the gem within your application, you can also configure your gem using the gem's .authenticate convenience method. This is how you can use the convenience method.
 
   ```ruby
   Teachable::Stats.authenticate(email: "valid_email1@example.com", password: "password")
@@ -95,7 +96,7 @@ You need to set your :user_email and :user_token prior to making API requests to
   "Logged in as user: valid_email1@example.com with token: -y9s9TyMHdWmniBLfE8i"
   ```
 
-  Behind the scenes, that sets the class variables called user_email and user_token to the email and user_token that are shown in the string. All you need to provide to the authenticate convenience method are your already registered and valid email and password. That's it!
+  (This doesn't actually truly authenticate with the API... it really just sets the class variables user_email and user_token so that they can be sent along with the API requests in query parameters.) Behind the scenes, that sets the class variables called user_email and user_token to the email and user_token that are shown in the string. All you need to provide to the authenticate convenience method are your already registered and valid email and password. That's it!
 
 ## Making queries to the Teachable API
 
@@ -289,7 +290,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/Jwan622/teachable-stats.
+Bug reports and pull requests are welcome on GitHub at https://github.com/Jwan622/teachable_challenge_gem
 
 Many thanks to the development team:
 - Jeffrey Wan

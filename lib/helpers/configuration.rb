@@ -1,4 +1,3 @@
-
 module Configuration
   def configuration
     yield self
