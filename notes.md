@@ -8,7 +8,7 @@ I include the Configuration model for the times when the user's configuration ch
 I wrote the method signatures with keyword arguments because I'm all about that life (it sincerity, it does 3 things for us:
   1. allows us to see what the names of the arguments are without having to read the method of the body.
   2. reduces boiletplate code for extracting hash options.
-  3. The caling method is syntactically equal to calling a method with hash options.)
+  3. The calling method is syntactically equal to calling a method with hash options.)
 
 -the email parameter in create_order is probably redundant or at least unclear. Do we want the behavior to be that only a user can create orders only for himself or for other users? I assume we only want users to create their own orders. IF that's the case, then I think the email parameter is redundant and perhaps behavior we don't want.
 - the number column when create a new order is a random string of letters. I took the liberty in interpreting number as just the number of orders to create with the specific parameters of total, total_quantity, and the associated email. For example:

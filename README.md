@@ -126,7 +126,18 @@ Teachable::Stats.create_my_order(number: 1, total: 2.0, total_quantity: 3, email
 
 In the above convenience method for creating_orders, you currently need to provide your registered email. However, in future versions we will likely take this away since your are currently authenticated by this point.
 
-The above method will create an order for the authenticated user. See this:
+The above method will create an order for the authenticated user. This is the response:
+
+```
+[{"id"=>141,
+  "number"=>"279ac021874278bc",
+  "total"=>"2.0",
+  "total_quantity"=>3,
+  "email"=>"valid_email1@example.com",
+  "special_instructions"=>"special instructions foo bar",
+  "created_at"=>"2016-02-18T04:16:34.397Z",
+  "updated_at"=>"2016-02-18T04:16:34.397Z"}]
+```
 
 **Orders#destroy**
 ```ruby
